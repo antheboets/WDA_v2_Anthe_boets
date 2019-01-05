@@ -1,3 +1,4 @@
+--https://github.com/raramuridesign/mysql-country-list
 INSERT INTO Country VALUES (null, 'AD', 'Andorra');
 INSERT INTO Country VALUES (null, 'AE', 'United Arab Emirates');
 INSERT INTO Country VALUES (null, 'AF', 'Afghanistan');
