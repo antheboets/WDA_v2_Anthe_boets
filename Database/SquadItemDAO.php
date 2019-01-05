@@ -36,6 +36,8 @@ class SquadItemDAO{
     public static function create($SquadId,$itemId,$itemTypeId){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO SquadItems VALUES(?,?,?);", array($SquadId,$itemId,$itemTypeId));
     }
+    
+
 
     private static function convertRowToObject($row){
         switch ($row['ItemType']) {

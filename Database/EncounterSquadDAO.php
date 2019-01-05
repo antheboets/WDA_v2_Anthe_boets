@@ -14,6 +14,10 @@ class EncounterSquadDAO{
     }
 
 
+    public static function update($encounterId,$encounterSquad){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE EncounterSquads SET EncounterRate = ? WHERE EncounterId = ?, SquadId = ?;", array($encounterSquad->EncounterRate,$encounterId,$encounterSquad->squad->id));
+    }
+
     private static function convertRowToObject($row){
         if(!is_null($row)){
             $squad = SquadDAO::getById($row);

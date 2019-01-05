@@ -25,6 +25,10 @@ class OpticDAO{
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Optic VALUES (NILL,'?',?,?);", array($optic->name,$optic->AccuracyBoost,$optic->creator->id));
     }
 
+    public static function update($optic){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Optic SET Name = '?', AccuracyBoost = ? WHERE GunId = ?;", array($optic->name,$optic->accuracyBoost,$optic->id));
+    }
+
     private static function convertRowToObject($row){
         if(!is_null($row)){
             $creator = UserDAO::getCreatorById($row['CreatorId']);

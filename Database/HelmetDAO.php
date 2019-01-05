@@ -25,6 +25,10 @@ class HelmetDAO{
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Helmet VALUES (NILL,'?',?,?,?,?);", array($helmet->name,$helmet->Value,$helmet->creator->id));
     }
 
+    public static function update($helmet){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Helmet SET Name = '?', Value = ? WHERE GunId = ?;", array($helmet->name,$helmet->value,$helmet->id));
+    }
+
     private static function convertRowToObject($row){
         if(!is_null($row)){
             $creator = UserDAO::getCreatorById($row['CreatorId']);

@@ -20,6 +20,10 @@ class CalDAO{
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+    public static function update($cal){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Cal SET Name = '?',BaseDmg = ? WHERE CalId = ?;", array($cal->name,$cal->baseDmg,$cal->id));
+    }
+
     public static function createCal($cal){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Cal VALUES (NILL,'?',?,?);", array($cal->name,$cal->baseDmg,$cal->creator->id));
     }

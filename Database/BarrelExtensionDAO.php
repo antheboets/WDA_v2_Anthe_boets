@@ -20,6 +20,10 @@ class BarrelExtensionDAO{
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+    public static function update($barrelExtension){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE BarrelExtension SET Name = '?',DmgBoost = ?,AccuracyBoost = ? WHERE ArmourId = ?;", array($barrelExtension->name,$barrelExtension->dmgBoost,$barrelExtension->accuracyBoost,$barrelExtension->id));
+    }
+
     public static function create($barrelExtension){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO BarrelExtension VALUES (NILL,'?',?,?,?);", array($barrelExtension->name,$barrelExtension->dmgBoost,$barrelExtension->accuracyBoost,$barrelExtension->creator->id));
     }

@@ -15,7 +15,9 @@ class ArmourDAO{
         }
         return $resultsArray;    
 	}
-
+    public static function update($armour){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Armour SET Name = '?',Value = ? WHERE ArmourId = ?;", array($armour->name,$armour->Value,$armour->id));
+    }
 
 	public static function getById($id){
 		$result = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM Armour WHERE armourId = ?;", array($id));

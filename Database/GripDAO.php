@@ -21,6 +21,10 @@ class GripDAO{
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+    public static function update($grip){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Grip SET Name = '?', AccuracyBoost = ?, MinSalvoBoost = ?,MaxSalvoBoost = ? WHERE GripId = ?;", array($grip->name,$grip->accuracyBoost,$grip->minSalvoBoost,$grip->maxSalvoBoost,$grip->id));
+    }
+
     public static function create($grip){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Grip VALUES (NILL,'?',?,?,?,?);", array($grip->name,$grip->accuracyBoost,$grip->minSalvoBoost,$grip->maxSalvoBoost, $grip->creator->id));
     }

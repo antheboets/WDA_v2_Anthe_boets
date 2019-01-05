@@ -21,6 +21,10 @@ class AmmoTypeDAO{
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+    public static function update($ammoType){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE AmmoType SET Name = '?',DmgBoost = ? WHERE AmmoTypeId = ?;", array($ammoType->name,$ammoType->dmgBoost,$ammoType->id));
+    }
+
     public static function create($ammoType){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO AmmoType VALUES (NILL,'?',?,?,?);", array($ammoType->name,$ammoType->cal->id,$ammoType->dmgBoost,$ammoType->creator->id));
     }

@@ -3,6 +3,7 @@
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Encounter.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/UserDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/EncounterSquadDAO.php");
 
 class EncounterDAO{
 
@@ -25,6 +26,15 @@ class EncounterDAO{
         $result = DatabaseFactory::getDatabase()->executeQuery("SELECT EncounterId FROM Encounter WHERE Name = '?' AND CreatorId = ?;", array($name,$creatorId));
         $row = mysqli_fetch_array($result);
         return $row['EncounterId'];
+    }
+
+    public static function update($encounter){
+
+        foreach ($encounter->listSquads as $e){
+            EncounterSquadDAO::update($encounter->id,$e);
+        }
+
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE Encounter SET Name = '?' WHERE EncounterId = ?;", array($encounter->name,$encounter->id));
     }
 
     public static function create($encounter){

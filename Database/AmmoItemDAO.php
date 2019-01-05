@@ -34,6 +34,9 @@ class AmmoItemDAO{
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO AmmoItem VALUES (?,?,?);", array($SquadId,$ammoItem->ammoType->id,$ammoItem->amount));
     }
 
+    public static function update($SquadId,$ammoItem){
+        return DatabaseFactory::getDatabase()->executeQuery("UPDATE AmmoItem SET Amount = ? WHERE SquadId = ? AND AmmoTypeId = ?;", array($ammoItem->amount,$SquadId,$ammoItem->ammoType->id));
+    }
 
     private static function convertRowToObject($row){
         if(!is_null($row)){
