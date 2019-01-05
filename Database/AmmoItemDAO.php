@@ -2,7 +2,7 @@
 
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/AmmoItem.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
-
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/SquadDAO.php");
 class AmmoItemDAO{
     public static function getAll(){
         $results = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM AmmoItem");
@@ -28,6 +28,14 @@ class AmmoItemDAO{
             $listItems[$i] = AmmoItemDAO::getById($row);
         }
         return $listItems;
+    }
+
+    public static function delete($SquadId,$ammoItem){
+        $squad = SquadDAO::getById($SquadId->creator->id);
+        if(!is_null($squad)){
+            return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM AmmoItem WHERE SquadId = ? AND AmmoTypeId = ?;", array($SquadId,$ammoItem->ammoType->id));
+        }
+        return false;
     }
 
     public static function create($SquadId,$ammoItem){

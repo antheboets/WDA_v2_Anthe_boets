@@ -25,6 +25,10 @@ class GripDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Grip SET Name = '?', AccuracyBoost = ?, MinSalvoBoost = ?,MaxSalvoBoost = ? WHERE GripId = ?;", array($grip->name,$grip->accuracyBoost,$grip->minSalvoBoost,$grip->maxSalvoBoost,$grip->id));
     }
 
+    public static function delete($grip){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Grip WHERE GripId = ? AND CreatorId = ?;", array($grip->Id,$grip->creator->id));
+    }
+
     public static function create($grip){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Grip VALUES (NILL,'?',?,?,?,?);", array($grip->name,$grip->accuracyBoost,$grip->minSalvoBoost,$grip->maxSalvoBoost, $grip->creator->id));
     }

@@ -15,6 +15,11 @@ class ArmourDAO{
         }
         return $resultsArray;    
 	}
+
+    public static function delete($armour){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Armour WHERE ArmourId = ? AND CreatorId = ?;", array($armour->id,$armour->creator->id));
+    }
+
     public static function update($armour){
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Armour SET Name = '?',Value = ? WHERE ArmourId = ?;", array($armour->name,$armour->Value,$armour->id));
     }

@@ -21,6 +21,10 @@ class AmmoTypeDAO{
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+    public static function delete($ammoType){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM AmmoType WHERE AmmoTypeId = ? AND CreatorId = ?;", array($ammoType->$ammoType->id,$ammoType->creator->id));
+    }
+
     public static function update($ammoType){
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE AmmoType SET Name = '?',DmgBoost = ? WHERE AmmoTypeId = ?;", array($ammoType->name,$ammoType->dmgBoost,$ammoType->id));
     }

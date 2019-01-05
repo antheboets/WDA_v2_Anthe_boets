@@ -34,6 +34,10 @@ class SquadDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Squad SET Name = '?' WHERE SquadId = ?;", array($squad->name,$squad->id));
     }
 
+    public static function delete($squad){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Squad WHERE SquadId = ? AND CreatorId = ?;", array($squad->Id,$squad->creator->id));
+    }
+
     public static function getById($id){
         $result = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM Squad WHERE SquadId = ?;", array($id));
         return self::convertRowToObject(mysqli_fetch_array($result));

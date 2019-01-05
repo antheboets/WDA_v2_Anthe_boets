@@ -27,6 +27,11 @@ class MagDAO{
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Mag VALUES(NULL,'?',?,?,?);", array($mag->name,$mag->cal->id,$mag->capacity,$mag->AmmoType->id,$mag->creatorId));
     }
 
+    public static function delete($mag){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Mag WHERE MagId = ? AND CreatorId = ?;", array($mag->Id,$mag->creator->id));
+    }
+
+
     public static function update($mag){
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Mag SET Name = '?', Capacity = ?,AmmoTypeId = ? WHERE GunId = ?;", array($mag->name,$mag->capacity,$mag->ammoTypeId,$mag->id));
     }

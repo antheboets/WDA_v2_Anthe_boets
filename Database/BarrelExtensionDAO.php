@@ -16,12 +16,18 @@ class BarrelExtensionDAO{
     }
 
     public static function getById($id){
-        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM BarrelExtension WHERE BarrelExtensionId = ?;", array($id));
+        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM BarrelExtension WHERE BarrelExtension = ?;", array($id));
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
+
+
     public static function update($barrelExtension){
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE BarrelExtension SET Name = '?',DmgBoost = ?,AccuracyBoost = ? WHERE ArmourId = ?;", array($barrelExtension->name,$barrelExtension->dmgBoost,$barrelExtension->accuracyBoost,$barrelExtension->id));
+    }
+
+    public static function delete($barrelExtension){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM BarrelExtension WHERE BarrelExtension = ? AND CreatorId = ?;", array($barrelExtension->id,$barrelExtension->creator->id));
     }
 
     public static function create($barrelExtension){

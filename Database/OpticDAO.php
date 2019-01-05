@@ -29,6 +29,10 @@ class OpticDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Optic SET Name = '?', AccuracyBoost = ? WHERE GunId = ?;", array($optic->name,$optic->accuracyBoost,$optic->id));
     }
 
+    public static function delete($optic){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Optic WHERE OpticId = ? AND CreatorId = ?;", array($optic->Id,$optic->creator->id));
+    }
+
     private static function convertRowToObject($row){
         if(!is_null($row)){
             $creator = UserDAO::getCreatorById($row['CreatorId']);

@@ -49,6 +49,10 @@ class SoldierDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Soldier SET Name = '?',GunId = ?,CountryId = ?, ArmourId = ?, HelmetId = ?, Description = ?, WHERE GunId = ?;", array($soldier->name,$soldier->gun->id,$soldier->country->id,$soldier->armour->id,$soldier->helmet->id,$soldier->desc,$soldier->id));
     }
 
+    public static function delete($soldier){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Soldier WHERE SoldierId = ? AND CreatorId = ?;", array($soldier->Id,$soldier->creator->id));
+    }
+
     public static function create($soldier){
 
         $soldierId = 0;

@@ -10,6 +10,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/HelmetDAO.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/MagDAO.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/OpticDAO.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/AmmoItemDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/ItemTypeDAO.php");
 class SquadItemDAO{
 
 
@@ -33,10 +34,28 @@ class SquadItemDAO{
         return $squadItems;
     }
 
+    public static function delete($squadId,$squadItem){
+
+        $itemTypeList = ItemTypeDAO::getAll();
+
+        foreach ($itemTypeList as $e){
+            if($e->name == get_class($squadItem)){
+                if($e->id >= 7){
+                    return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM SquadItem WHERE SquadId = ?, ItemId = ?, ItemType = ?;", array($squadId,$squadItem->id,$e->id ));
+                }
+                elseif($e->id == 8) {
+                    return AmmoItemDAO::delete($squadId, $squadItem);
+                }
+            }
+        }
+        return false;
+
+    }
+
     public static function create($SquadId,$itemId,$itemTypeId){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO SquadItems VALUES(?,?,?);", array($SquadId,$itemId,$itemTypeId));
     }
-    
+
 
 
     private static function convertRowToObject($row){

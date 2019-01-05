@@ -28,6 +28,10 @@ class GunDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Gun SET Name = '?', MaxSalvo = ?, MinSalvo = ?,MaxSalvoBoost = ?,CalId = ?,MagId = ?,CanHaveOptic = ?,OpticId = ?,CanHaveGrip = ?,GripId = ?,CanHaveBarrelExtension = ?, BarrelExtensionId = ?,Description = '?' WHERE GunId = ?;", array($gun->Name,$gun->maxSalvo,$gun->minSalvo,$gun->accuracy,$gun->cal->id,$gun->mag->id,$gun->canHaveOptic,$gun->optic->id,$gun->canHaveGrip,$gun->grip->id,$gun->canHaveBarrelExtension,$gun->barrelExtension->id,$gun->desc,$gun->id));
     }
 
+    public static function delete($gun){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Gun WHERE GunId = ? AND CreatorId = ?;", array($gun->Id,$gun->creator->id));
+    }
+
     public static function create($gun){
 
         $opticId = 0;

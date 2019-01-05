@@ -41,6 +41,9 @@ class UserDAO{
         return false;
     }
 
+    public static function delete($user){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM User WHERE UserId = ?;", array($user->Id));
+    }
 
     public static function update($user){
         if(self::checkEmail($user->email)){

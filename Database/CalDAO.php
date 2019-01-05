@@ -24,6 +24,10 @@ class CalDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Cal SET Name = '?',BaseDmg = ? WHERE CalId = ?;", array($cal->name,$cal->baseDmg,$cal->id));
     }
 
+    public static function delete($cal){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Cal WHERE CalId = ? AND CreatorId = ?;", array($cal->id,$cal->creator->id));
+    }
+
     public static function createCal($cal){
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Cal VALUES (NILL,'?',?,?);", array($cal->name,$cal->baseDmg,$cal->creator->id));
     }

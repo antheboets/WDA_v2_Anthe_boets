@@ -29,6 +29,10 @@ class HelmetDAO{
         return DatabaseFactory::getDatabase()->executeQuery("UPDATE Helmet SET Name = '?', Value = ? WHERE GunId = ?;", array($helmet->name,$helmet->value,$helmet->id));
     }
 
+    public static function delete($helmet){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Helmet WHERE HelmetId = ? AND CreatorId = ?;", array($helmet->Id,$helmet->creator->id));
+    }
+
     private static function convertRowToObject($row){
         if(!is_null($row)){
             $creator = UserDAO::getCreatorById($row['CreatorId']);

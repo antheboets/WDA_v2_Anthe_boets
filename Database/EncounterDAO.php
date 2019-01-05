@@ -28,6 +28,10 @@ class EncounterDAO{
         return $row['EncounterId'];
     }
 
+    public static function delete($encounter){
+        return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM Encounter WHERE EncounterId = ? AND CreatorId = ?;", array($encounter->id,$encounter->creator->id));
+    }
+
     public static function update($encounter){
 
         foreach ($encounter->listSquads as $e){
