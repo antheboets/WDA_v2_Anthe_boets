@@ -7,7 +7,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Mag.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Optic.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Grip.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/barrelExtension.php");
-class Sqaud{
+class Squad{
 
     public $id;
     public $creator;
