@@ -2,11 +2,11 @@
 class EncounterSquad{
 
     public $sqaud;
-    public $EncounterRate;
+    public $encounterRate;
 
-    public function __construct($sqaud, $EncounterRate){
+    public function __construct($sqaud, $encounterRate){
         $this->sqaud = $sqaud;
-        $this->EncounterRate = $EncounterRate;
+        $this->encounterRate = $encounterRate;
     }
 
 
