@@ -1,11 +1,11 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/database/UserDAO.php");
 session_start();
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/lib.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/SoldierDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Logic/lib.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/database/SoldierDAO.php");
 if(!isLogedIn()){
-	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/autoLogin.php");
+	include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Logic/autoLogin.php");
 }
 
 ?>
@@ -34,7 +34,7 @@ if(!isLogedIn()){
 				
 		</script>
 		<?php 
-			include($_SERVER['DOCUMENT_ROOT']."/TacGen/UI/component/header.php");
+			include("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/UI/component/header.php");
 		?>
 		<div class="container">
             <div class="row">
