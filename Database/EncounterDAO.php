@@ -1,9 +1,9 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Encounter.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/UserDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/EncounterSquadDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Encounter.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/UserDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/EncounterSquadDAO.php");
 
 class EncounterDAO{
 

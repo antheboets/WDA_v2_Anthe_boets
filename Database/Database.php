@@ -55,8 +55,6 @@ class Database{
             $q = $finalQuery;
         }
         $result = $this->connection->query($q);
-        var_dump($result);
-        echo "<br>";
         return $result;
     }
 

@@ -1,11 +1,11 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/gun.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/CalDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/MagDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/OpticDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/BarrelExtensionDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/gun.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/CalDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/MagDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/OpticDAO.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/BarrelExtensionDAO.php");
 
 class GunDAO{
 
@@ -67,13 +67,25 @@ class GunDAO{
 
     private static function convertRowToObject($row){
 
-    	if(is_null($row)){
+    	if(!is_null($row)){
     		$cal = CalDAO::getById($row['CalId']);
-    		if(is_null($cal)){
-    			$mag = MagDAO::getById($row['MagId']);
-                $optic = OpticDAO::getById($row['OpticId']);
-    			$grip = GripDAO::getById($row['GripId']);
-    			$barrelExtension = BarrelExtensionDAO::getById($row['BarrelExtensionId']);
+    		if(!is_null($cal)){
+                $mag = NULL;
+                $optic =  NULL;
+                $grip = NULL;
+                $barrelExtension = NULL;
+                if(!is_null($row['MagId'])){
+                    $mag = MagDAO::getById($row['MagId']);
+                }
+                if(!is_null($row['OpticId'])){
+                    $optic = OpticDAO::getById($row['OpticId']);
+                }
+                if(!is_null($row['GripId'])){
+                    $grip = GripDAO::getById($row['GripId']);
+                }
+                if(!is_null($row['BarrelExtensionId'])){
+                    $barrelExtension = BarrelExtensionDAO::getById($row['BarrelExtensionId']);
+                }
                 $creator = UserDAO::getCreatorById($row['CreatorId']);
                 return  new Gun($row['GunId'],$creator,$row['Name'],$row['MaxSalvo'],$row['MinSalvo'],$row['Accuracy'],$cal,$mag,$row['CanHaveOptic'],$optic,$row['CanHaveGrip'],$grip,$row['CanHaveBarrelExtension'],$barrelExtension,$row['Description']);
     		}

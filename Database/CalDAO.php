@@ -1,7 +1,7 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Cal.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Cal.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
 
 class CalDAO{
 

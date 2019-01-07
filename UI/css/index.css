@@ -1,0 +1,21 @@
+.soldier{
+	border: 1px black solid;
+	display: inline-block;
+}
+a{
+	color: #212529;
+	text-decoration: none;
+}
+a:hover{
+	color: #212529;
+	text-decoration: none;
+}
+a:active{
+	color: #212529;
+	text-decoration: none;
+
+}
+a:focus{
+	color: #212529;
+	text-decoration: none;
+}

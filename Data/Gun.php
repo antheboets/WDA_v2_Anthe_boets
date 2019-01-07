@@ -1,10 +1,11 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Mag.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Optic.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Grip.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/barrelExtension.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Cal.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/Mag.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/Optic.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/Grip.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/barrelExtension.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/Cal.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/User.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/Data/AmmoType.php");
 class Gun{
 
     public $id;
@@ -42,6 +43,42 @@ class Gun{
         $this->desc = $desc;
     }
 
+    public function getDmg(){
+
+        $dmg = $this->cal->baseDmg;
+        if($this->hasMag()){
+            $dmg *= $this->mag->ammoType->dmgBoost;
+        }
+        if($this->hasBarrelExtension()){
+            $dmg *= $this->barrelExtension->dmgBoost;
+        }
+        return $dmg;
+    }
+    public function getMaxSalvo(){
+        $maxSalvo = $this->maxSalvo;
+        if($this->hasGrip()) {
+            $maxSalvo += $this->grip->maxSalvoBoost;
+        }
+        return $maxSalvo;
+    }
+
+    public function getMinSalvo(){
+        $minSalvo = $this->minSalvo;
+        if($this->hasGrip()){
+            $minSalvo += $this->grip->minSalvoBoost;
+        }
+        return $minSalvo;
+    }
+    public function getAccuracy(){
+        $accuracy = $this->accuracy;
+        if($this->hasOptic()){
+            $accuracy += $this->optic->accuracyBoost;
+        }
+        if($this->hasGrip()){
+            $accuracy += $this->grip->accuracyBoost;
+        }
+        return $accuracy;
+    }
 
     public function checkCal($cal){
 		if($this->cal->id == $cal->id){

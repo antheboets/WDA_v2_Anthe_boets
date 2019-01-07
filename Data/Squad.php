@@ -1,12 +1,12 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Gun.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Armour.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Helmet.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Mag.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Optic.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Grip.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/barrelExtension.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Gun.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Armour.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Helmet.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Mag.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Optic.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Grip.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/barrelExtension.php");
 class Squad{
 
     public $id;

@@ -1,0 +1,9 @@
+.error{
+	color: red;
+}
+.noBreak{
+	margin: 0px;
+}
+.inputError{
+	border: red 1px solid;
+}

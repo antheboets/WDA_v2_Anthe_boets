@@ -1,10 +1,10 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
 
 class UserDAO{
     public static function getAll(){
-        $results = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM User");
+        $results = DatabaseFactory::getDatabase()->executeQuery("SELECT UserId,Name,Email FROM User");
         $resultsArray = array();
         for($i = 0; $i < $results->num_rows; $i++){
             $row = $results->fetch_array();
@@ -24,19 +24,19 @@ class UserDAO{
     }
 
     public static function getById($id){
-        $result  = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM User WHERE SquadId = ?;", array($id));
+        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT UserId,Name,Email  FROM User WHERE UserId = ?;", array($id));
         return self::convertRowToObject(mysqli_fetch_array($result));
     }
 
     public static function getCreatorById($id){
-        $result  = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM User WHERE SquadId = ?;", array($id));
+        $result  = DatabaseFactory::getDatabase()->executeQuery("SELECT UserId,Name,Email  FROM User WHERE UserId = ?;", array($id));
         return self::convertRowToObjectWithoutEmail(mysqli_fetch_array($result));
     }
 
-    public static function checkCredentioals($email,$hash){
-        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM User WHERE Email = ? AND Hash = ?;", array($email,$hash));
+    public static function checkCredentials($email,$hash){
+        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT UserId,Name,Email  FROM User WHERE Email = '?' AND Hash = '?';", array($email,$hash));
         if(!is_null($result)){
-            return true;
+             return self::convertRowToObject(mysqli_fetch_array($result));
         }
         return false;
     }
@@ -45,9 +45,14 @@ class UserDAO{
         return DatabaseFactory::getDatabase()->executeQuery("DELETE FROM User WHERE UserId = ?;", array($user->Id));
     }
 
+    public static function getByEmail($email){
+        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT UserId,Name,Email  FROM User WHERE Email = '?';", array($email));
+        return self::convertRowToObject(mysqli_fetch_array($result));
+    }
+
     public static function update($user){
         if(self::checkEmail($user->email)){
-            return DatabaseFactory::getDatabase()->executeQuery("UPDATE User SET Name = '?', email = '?' WHERE UserId = ?;", array($user->name,$user->email,$user->id));
+            return DatabaseFactory::getDatabase()->executeQuery("UPDATE User SET Name = '?', email = '?' WHERE UserId = ?;", array($user->username,$user->email,$user->id));
         }
         return false;
 
@@ -56,7 +61,7 @@ class UserDAO{
     public static function getSaltFromUser($email){
 
 
-        $result  = DatabaseFactory::getDatabase()->executeQuery("SELECT Salt FROM User WHERE Email = ?;", array($email));
+        $result = DatabaseFactory::getDatabase()->executeQuery("SELECT Salt FROM User WHERE Email = '?';", array($email));
         if(!is_null($result)){
             $row = $result->fetch_array();
             return $row['Salt'];
@@ -65,7 +70,7 @@ class UserDAO{
     }
 
     public static function create($user,$pass,$salt){
-        return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO User VALUES (NULL,'?','?','?','?',sysdate())",array($user->name,$pass,$salt,$user->email));
+        return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO User VALUES (NULL,'?','?','?','?',sysdate())",array($user->username,$pass,$salt,$user->email));
     }
 
     private static function convertRowToObject($row){

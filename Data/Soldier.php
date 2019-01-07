@@ -1,9 +1,9 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Gun.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Country.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Armour.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Helmet.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Gun.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Country.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Armour.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Helmet.php");
+include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/User.php");
 class Soldier{
 
     public $id;
@@ -14,9 +14,10 @@ class Soldier{
 	public $armour;
 	public $helmet;
 	public $desc;
+    public $img;
 
 
-    public function __construct($id, $creator, $name, $gun, $country, $armour, $helmet, $desc){
+    public function __construct($id, $creator, $name, $gun, $country, $armour, $helmet, $desc, $img){
         $this->id = $id;
         $this->creator = $creator;
         $this->name = $name;
@@ -25,6 +26,7 @@ class Soldier{
         $this->armour = $armour;
         $this->helmet = $helmet;
         $this->desc = $desc;
+        $this->img = $img;
     }
 
 
