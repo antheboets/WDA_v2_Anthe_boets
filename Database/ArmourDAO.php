@@ -1,7 +1,7 @@
 <?php
 
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Armour.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Armour.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
 
 class ArmourDAO{
 

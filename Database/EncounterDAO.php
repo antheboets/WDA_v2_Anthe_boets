@@ -1,9 +1,9 @@
 <?php
 
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/Encounter.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/UserDAO.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/EncounterSquadDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Encounter.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/UserDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/EncounterSquadDAO.php");
 
 class EncounterDAO{
 

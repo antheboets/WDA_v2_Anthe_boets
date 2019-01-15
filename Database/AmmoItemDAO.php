@@ -1,8 +1,8 @@
 <?php
 
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Data/AmmoItem.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Database/SquadDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/AmmoItem.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/SquadDAO.php");
 class AmmoItemDAO{
     public static function getAll(){
         $results = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM AmmoItem");

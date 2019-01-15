@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include_once("/mnt/studentenhomes/naam.achternaam/public_html/WDA/TacGen/database/UserDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/UserDAO.php");
 
 if(isset($_COOKIE['autoLogin'])){
 	if(!empty($_COOKIE['autoLogin'])){

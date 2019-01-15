@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/Logic/lib.php");
-	include_once("/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/database/UserDAO.php");
+	include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Logic/lib.php");
+	include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/UserDAO.php");
 
 	if($_SERVER["REQUEST_METHOD"] == 'POST'){
 		if(isset($_POST['email']) && isset($_POST['password'])){
@@ -25,11 +25,11 @@
 					$user = UserDAO::checkCredentials($_POST['email'],$hash);
 					if(!is_null($user)){
 						$_SESSION['user'] = $user;
-						header('location: ""/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/TacGen/index.php');
+						header("location: /mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/TacGen/index.php");
 					}
 				}
 			}
 		}
 	}
-	header('location: ""/mnt/studentenhomes/Anthe.Boets/public_html/WDA/TacGen/TacGen/index.php');
+	header("location: /mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/TacGen/index.php");
 ?>
