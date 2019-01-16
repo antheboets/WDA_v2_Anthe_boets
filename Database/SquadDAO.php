@@ -1,16 +1,16 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Squad.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/ArmourDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/BarrelExtensionDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/GripDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/GunDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/HelmetDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/MagDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/OpticDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/AmmoItemDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/SquadItemDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Squad.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/ArmourDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/BarrelExtensionDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/GripDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/GunDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/HelmetDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/MagDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/OpticDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/AmmoItemDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/SquadItemDAO.php");
 class SquadDAO{
 
 	public static function getAll(){

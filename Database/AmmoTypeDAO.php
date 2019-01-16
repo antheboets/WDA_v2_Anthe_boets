@@ -1,7 +1,7 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/AmmoType.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/AmmoType.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
 
 class AmmoTypeDAO{
 

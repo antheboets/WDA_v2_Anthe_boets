@@ -1,7 +1,7 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/User.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Cal.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Cal.php");
 class AmmoType{
 
     public $id;

@@ -1,11 +1,11 @@
 <?php
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/Mag.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/Optic.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/Grip.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/barrelExtension.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/Cal.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/User.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/Data/AmmoType.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Mag.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Optic.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Grip.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/BarrelExtension.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Cal.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/AmmoType.php");
 class Gun{
 
     public $id;

@@ -1,11 +1,11 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/gun.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/CalDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/MagDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/OpticDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/BarrelExtensionDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Gun.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/CalDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/MagDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/OpticDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/BarrelExtensionDAO.php");
 
 class GunDAO{
 

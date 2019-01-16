@@ -1,6 +1,6 @@
 <?php
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Helmet.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Helmet.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
 
 class HelmetDAO{
 

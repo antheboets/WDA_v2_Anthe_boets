@@ -3,8 +3,43 @@
   <component name="ChangeListManager">
     <list default="true" id="23d8e861-99d7-4365-ade1-191266cb0af0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AmmoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AmmoType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Armour.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Armour.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/BarrelExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/BarrelExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Cal.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Cal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Grip.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Grip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Gun.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Gun.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Helmet.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Helmet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Mag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Mag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Optic.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Optic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Soldier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Soldier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/githubLink.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Squad.php" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Squad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/AmmoItemDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/AmmoItemDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/AmmoTypeDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/AmmoTypeDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/ArmourDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/ArmourDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/BarrelExtensionDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/BarrelExtensionDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/CalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/CalDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/CountryDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/CountryDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/DatabaseFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/DatabaseFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/EncounterDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/EncounterDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/EncounterSquadDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/EncounterSquadDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/GripDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/GripDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/GunDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/GunDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/HelmetDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/HelmetDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/ItemTypeDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/ItemTypeDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/MagDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/MagDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/OpticDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/OpticDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/SoldierDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/SoldierDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/SquadDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/SquadDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/SquadItemDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/SquadItemDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database/UserDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/autoLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/autoLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/createSoldier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/createSoldier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/signUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/signUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/pages/creations.php" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/creations.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/Data/Helmet.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+              <caret line="1" column="65" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -99,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/Data/Mag.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -170,10 +205,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2679" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1918" />
-    <option name="height" value="1078" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -253,12 +288,12 @@
       <workItem from="1546820679192" duration="32220000" />
       <workItem from="1547571969740" duration="981000" />
       <workItem from="1547575333628" duration="998000" />
-      <workItem from="1547579722064" duration="3939000" />
+      <workItem from="1547579722064" duration="4537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138031000" />
+    <option name="totallyTimeSpent" value="138629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="3856" height="2176" extended-state="6" />
@@ -599,7 +634,7 @@
     <entry file="file://$PROJECT_DIR$/Data/Helmet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+          <caret line="1" column="65" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -613,7 +648,7 @@
     <entry file="file://$PROJECT_DIR$/Data/Mag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
         </state>
       </provider>
     </entry>

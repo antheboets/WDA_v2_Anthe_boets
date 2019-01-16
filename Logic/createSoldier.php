@@ -1,14 +1,14 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/UserDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/UserDAO.php");
 session_start();
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Logic/lib.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/SoldierDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/CountryDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/GunDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/ArmourDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/database/HelmetDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Logic/lib.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/SoldierDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/CountryDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/GunDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/ArmourDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/database/HelmetDAO.php");
 
 
 

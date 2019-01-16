@@ -1,5 +1,5 @@
 <?php
-	include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/Database.php");
+	include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/Database.php");
 
 	class DatabaseFactory{
 

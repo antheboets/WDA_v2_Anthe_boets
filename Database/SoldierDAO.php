@@ -1,11 +1,11 @@
 <?php
 
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Soldier.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/CountryDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/GunDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/ArmourDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Database/HelmetDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Soldier.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/CountryDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/GunDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/ArmourDAO.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/HelmetDAO.php");
 
 class SoldierDAO{
 

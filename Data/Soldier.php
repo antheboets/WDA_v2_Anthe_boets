@@ -1,9 +1,9 @@
 <?php
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Gun.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Country.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Armour.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/Helmet.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/WDA/TacGen/Data/User.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Gun.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Country.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Armour.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Helmet.php");
+include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/User.php");
 class Soldier{
 
     public $id;
