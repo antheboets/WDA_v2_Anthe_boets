@@ -29,6 +29,20 @@ class Soldier{
         $this->img = $img;
     }
 
-
+    public function printSoldier(){
+        $str = "<div class='col-md-4'>";
+        $str .= "<div class='soldier'>";
+        $str .= "<a href=\"soldierDetail?id=". $this->id ."\">";
+        $str .= "<img src=\" ". $this->img ."\" height=\"600px\" width=\"300px\">";
+        $str .= "<p class=\"noBreak\">Name: ". $this->name ."</p>";
+        $str .= "<p class=\"noBreak\">Country: ". $this->country->code ."</p>";
+        $str .= "<p class=\"noBreak\">Gun: ". $this->gun->name ."</p>";
+        $str .= "<p class=\"noBreak\">Helmet: ". $this->helmet->name ."</p>";
+        $str .= "<p class=\"noBreak\">Armour: ". $this->armour->name ."</p>";
+        $str .= "</a>";
+        $str .= "</div>";
+        $str .= "</div>";
+        echo $str;
+    }
 }
 ?>
