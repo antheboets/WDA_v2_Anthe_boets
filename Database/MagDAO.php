@@ -1,8 +1,8 @@
 <?php
-include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/Mag.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Database/CalDAO.php");
-include_once("/mnt/studentenhomes/anthe.boets/public_html/TacGen/Data/AmmoType.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Mag.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/CalDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/AmmoType.php");
 
 class MagDAO{
 
