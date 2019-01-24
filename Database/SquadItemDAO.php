@@ -1,16 +1,16 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Data/Squad.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/DatabaseFactory.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/ArmourDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/BarrelExtensionDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/GripDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/GunDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/HelmetDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/MagDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/OpticDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/AmmoItemDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Database/ItemTypeDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Squad.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/ArmourDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/BarrelExtensionDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/GripDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/GunDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/HelmetDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/MagDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/OpticDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/AmmoItemDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/ItemTypeDAO.php");
 class SquadItemDAO{
 
 

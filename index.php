@@ -1,11 +1,11 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/UserDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
 session_start();
 
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Logic/lib.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/SoldierDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/lib.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/SoldierDAO.php");
 if(!isLogedIn()){
-	include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Logic/autoLogin.php");
+	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/autoLogin.php");
 }
 
 ?>

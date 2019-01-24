@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/UserDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
 
 if(isset($_COOKIE['autoLogin'])){
 	if(!empty($_COOKIE['autoLogin'])){

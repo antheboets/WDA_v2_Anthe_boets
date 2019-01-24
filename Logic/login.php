@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Logic/lib.php");
-	include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/UserDAO.php");
+	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/lib.php");
+	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
 
 	if($_SERVER["REQUEST_METHOD"] == 'POST'){
 		if(isset($_POST['email']) && isset($_POST['password'])){

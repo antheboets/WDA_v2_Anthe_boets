@@ -1,14 +1,14 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/UserDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
 session_start();
 
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/Logic/lib.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/SoldierDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/CountryDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/GunDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/ArmourDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."TacGen/database/HelmetDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/lib.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/SoldierDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/CountryDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/GunDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/ArmourDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/HelmetDAO.php");
 
 
 
