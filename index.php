@@ -34,7 +34,7 @@ if(!isLogedIn()){
 				
 		</script>
 		<?php 
-			include($_SERVER['DOCUMENT_ROOT']."TacGen/UI/component/header.php");
+			include($_SERVER['DOCUMENT_ROOT']."/TacGen/UI/component/header.php");
 		?>
 		<div class="container">
             <div class="row">
