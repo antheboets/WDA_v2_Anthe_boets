@@ -1,9 +1,9 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Gun.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Country.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Armour.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Helmet.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Gun.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Country.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Armour.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Helmet.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/User.php");
 class Soldier{
 
     public $id;

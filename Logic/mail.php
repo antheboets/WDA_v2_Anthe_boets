@@ -4,7 +4,7 @@
 			if(!empty($_POST['email']) && !empty($_POST['header']) && !empty($_POST['body']) && !empty($_POST['send'])){
 				$headers[] = 'From: <'.$_POST['email'].'>';
 				mail('anthe.boets@student.ehb.be',$_POST['header'],$_POST['body'],implode("\r\n", $headers));
-				header("location : ".$_SERVER['DOCUMENT_ROOT']."/TacGen/TacGen/UI/pages/contact.php");
+				header("location : ".$_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/TacGen/UI/pages/contact.php");
 			}
 		}
 	}

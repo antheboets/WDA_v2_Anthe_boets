@@ -1,11 +1,11 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Gun.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/CalDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/MagDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/OpticDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/BarrelExtensionDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Gun.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/CalDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/MagDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/OpticDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/BarrelExtensionDAO.php");
 
 class GunDAO{
 

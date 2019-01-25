@@ -1,11 +1,11 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Mag.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Optic.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Grip.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/BarrelExtension.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Cal.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/User.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/AmmoType.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Mag.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Optic.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Grip.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/BarrelExtension.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Cal.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/User.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/AmmoType.php");
 class Gun{
 
     public $id;

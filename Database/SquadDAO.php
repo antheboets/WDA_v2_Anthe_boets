@@ -1,16 +1,16 @@
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Data/Squad.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/DatabaseFactory.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/ArmourDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/BarrelExtensionDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/GripDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/GunDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/HelmetDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/MagDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/OpticDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/AmmoItemDAO.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Database/SquadItemDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Data/Squad.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/DatabaseFactory.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/ArmourDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/BarrelExtensionDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/GripDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/GunDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/HelmetDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/MagDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/OpticDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/AmmoItemDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Database/SquadItemDAO.php");
 class SquadDAO{
 
 	public static function getAll(){

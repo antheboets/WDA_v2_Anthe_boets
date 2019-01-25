@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/Logic/lib.php");
-	include_once($_SERVER['DOCUMENT_ROOT']."/TacGen/database/UserDAO.php");
+	include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/Logic/lib.php");
+	include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/database/UserDAO.php");
 
 	if($_SERVER["REQUEST_METHOD"] == 'POST'){
 		if(isset($_POST['email']) && isset($_POST['password'])){
@@ -25,11 +25,11 @@
 					$user = UserDAO::checkCredentials($_POST['email'],$hash);
 					if(!is_null($user)){
 						$_SESSION['user'] = $user;
-						header("location: ".$_SERVER['DOCUMENT_ROOT']."/TacGen/TacGen/index.php");
+						header("location: ".$_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/TacGen/index.php");
 					}
 				}
 			}
 		}
 	}
-	header("location: ".$_SERVER['DOCUMENT_ROOT']."/TacGen/TacGen/index.php");
+	header("location: ".$_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/TacGen/index.php");
 ?>
