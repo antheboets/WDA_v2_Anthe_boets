@@ -12,13 +12,18 @@ include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/UI/compo
 	$(document).ready(function() {
 		console.log("ready");
 		var request  = $.ajax({
-			"url": "<?php echo $_SERVER['DOCUMENT_ROOT'].'/anthe.boets/public_html/TacGen/Logic/lib.php' ?>",
+			"url": "http://dtsl.ehb.be/~anthe.boets/TacGen/Logic/api.php",
 			"method": "POST",
 			"dataType": "text"
 		});
 
 		request.done(function( msg ) {
+			console.log("succ")
   			console.log(msg);
+		});
+		request.fail(function( jqXHR ) {
+			console.log("fail");
+  			console.log(jqXHR);
 		});
 	});
 	console.log("not ready");
