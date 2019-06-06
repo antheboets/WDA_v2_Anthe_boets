@@ -4,7 +4,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if(isset($_POST['name'])){
 		if(!empty($_POST['name'])){
 			if($_POST['name'] != ""){
-				$soldierArray =
+				$soldierArray = SoldierDAO::getSoldiersByName($_POST['name']);
+				echo json_encode($soldierArray);
 			}
 		}
 	}
