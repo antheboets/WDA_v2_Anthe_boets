@@ -122,7 +122,7 @@ class SoldierDAO{
         return DatabaseFactory::getDatabase()->executeQuery("INSERT INTO Soldier VALUES (NULL,'?',?,?,?,?,'?',?,sysdate(),'?') ;", array($soldier->name,$soldierId,$countryId,$armourId,$helmetId,$soldier->desc,$soldier->creator->id,$soldier->img));
     }
     public static function getSoldiersByName($name){
-        $results = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM Soldier WHERE NAME = ?;", array($name));
+        $results = DatabaseFactory::getDatabase()->executeQuery("SELECT * FROM Soldier WHERE NAME LIKE '%?%';", array($name));
         $resultsArray = array();
         if($results){
             for($i = 0; $i < $results->num_rows; $i++){
