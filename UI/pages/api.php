@@ -14,7 +14,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/anthe.boets/public_html/TacGen/UI/compo
 		var request  = $.ajax({
 			"url": "http://dtsl.ehb.be/~anthe.boets/TacGen/Logic/api.php",
 			"method": "POST",
-			"dataType": "text",
+			"dataType": "json",
 			"data": "{'name': 'pmc'}"
 		});
 
